@@ -1,0 +1,13 @@
+{
+  "license": "UNLICENSED",
+  "dependencies": {
+    "colorthief": "2.4.0",
+    "jimp": "0.22.10"
+  },
+  "scripts": {
+    "start": "node"
+  },
+  "devDependencies": {
+    "standard": "17.1.0"
+  }
+}
