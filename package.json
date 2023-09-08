@@ -1,7 +1,6 @@
 {
   "license": "UNLICENSED",
   "dependencies": {
-    "colorthief": "2.4.0",
     "jimp": "0.22.10"
   },
   "scripts": {
