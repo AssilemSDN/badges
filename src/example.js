@@ -7,8 +7,8 @@ const path = require('path')
 /* That's an example of how using those functions */
 
 const directories = [
-  `${__dirname}/../examples/generated/ok`, 
-  `${__dirname}/../examples/generated/bad-format`, 
+  `${__dirname}/../examples/generated/ok`,
+  `${__dirname}/../examples/generated/bad-format`,
   `${__dirname}/../examples/generated/bad-size`,
   `${__dirname}/../examples/generated/bad-circle`,
   `${__dirname}/../examples/generated/not-happy`,
@@ -84,7 +84,6 @@ const verify = async () => {
       error: e.message
     }
   }
-  
 }
 // generate()
 verify()

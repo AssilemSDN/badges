@@ -17,9 +17,9 @@ const generateImage = async (options = {}) => {
     } = options
     /* Check imageFilename format */
     if (imageFileName.includes('/')) {
-      throw new Error('Le nom de fichier ne doit pas contenir le caractère "/".')
+      throw new Error('File name should not contains "/".')
     }
-    /* Generate 512x512 or smaller random size image (max 511x511), transparent background or no */
+    /* Generate SIZE_AVATAR x SIZE_AVATAR or smaller random size image (max 511x511), transparent background or no */
     const image = new Jimp(goodSize ? SIZE_AVATAR : Math.floor(Math.random() * (SIZE_AVATAR - 49)) + 50, goodSize ? SIZE_AVATAR : Math.floor(Math.random() * (SIZE_AVATAR - 49)) + 50, circle ? 0x00000000 : 0xFFFFFFFF)
     /* Add some happy or sad feeling */
     const generateColor = () => {
@@ -54,7 +54,7 @@ const generateImage = async (options = {}) => {
         }
       }
     })
-    const imagePath = path.join(directoryPath,`${imageFileName}.${format}`)
+    const imagePath = path.join(directoryPath, `${imageFileName}.${format}`)
     image.write(imagePath).then(() => {
       return {
         success: true,
